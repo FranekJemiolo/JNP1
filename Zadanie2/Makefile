@@ -2,7 +2,7 @@ CXX = g++
 DEBUG_FLAGS = -Wall -O0 -std=c++11 -g -c -DDEBUG
 RELEASE_FLAGS = -Wall -O2 -std=c++11 -c
 
-all: clean strset.o strsetconst.o
+all: strset.o strsetconst.o
 strset.o: strset.cc strsetconst.h strset.h
 ifeq ($(debuglevel), 1)	
 	$(CXX) $(DEBUG_FLAGS) $< -o $@
